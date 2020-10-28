@@ -1,0 +1,4 @@
+Page accueil > generation embed SF
+Liste streamers > génération liste streamers avec avatar + clic pour page perso ?
+Planning > template
+Formulaire de contact
