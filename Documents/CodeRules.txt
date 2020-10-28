@@ -1,0 +1,31 @@
+﻿Règles
+------
+Générales
+	Pas de commentaire, les noms de variables et de fonctions doivent être assez explicites
+	Indentation doit être une seule tabulation correspondant à 4 espaces (Formatter : CTRL+K CTRL+F)
+	Pas de ligne vide, fin de page compris, sauf pour séparer les blocs de codes ou des variables
+Fichiers ou répertoires
+	Pas de caractères accentués, ni espace, ni majuscules, ni tiret
+Images
+	Ne pas mettre les tailles et les autofermer
+	Pas de caractères accentués, ni espace, ni majuscules, tiret acceptés
+	Si moins de 256 couleurs utiliser PNG8 sinon choisir le plus faible en taille entre PNG24 et JPG
+Html
+	Trier les balises dans l'ordre alphabétique ou logique
+	Auto-fermer les balises : <meta name="" content="" />
+	Pas de Form et que des tags .net pour les formulaires
+Css
+	Trier les balises dans l'ordre alphabétique
+	Pas de ID, que des classes
+	Pas de suites de classes avec virgule
+	Pas de caractères accentués, ni espace, ni tiret, majuscules acceptés mais que pour noms de classes
+	Règles : .toto { height: 100%; width: 100%; }
+.Net
+	Utiliser des Literal plutôt que des Label si ce n'est que pour afficher du texte
+ASPX et ASCX
+	Trier les balises dans l'ordre alphabétique, mettre en premier runat="server" ID="", puis les paramètres, puis enfin les évènements
+C#
+	Utiliser les classes en majuscule pour les types (String, Int32)
+	Utiliser que des String.Format pour des concaténation de chaine (jamais de "toto" + i)
+	Si Test d'une valeur Boolean, ne pas mettre "== true"
+	Pas besoin de fermer le streamWriter vu qu'il est dans un using
