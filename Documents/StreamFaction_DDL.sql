@@ -48,7 +48,7 @@ FOREIGN KEY (usrif_iduser) REFERENCES Users(usr_id);
 CREATE TABLE "User_status"
 (
 	"usrst_id",
-	"usrst_",
+	"usrst_enabled",
 	"usrst_",
 	"usrst_",
 	"usrst_",
@@ -60,7 +60,7 @@ CREATE TABLE "User_status"
 CREATE TABLE Channels
 (
 	"cha_id" INT PRIMARY KEY NOT NULL,
-	"cha_user" INT NOT NULL,
+	/*"cha_user" INT NOT NULL,*/
 	"cha_name" VARCHAR(50) NOT NULL,
 	"cha_description" TEXT NULL,
 	"cha_facebook" VARCHAR(255) NULL,
@@ -92,7 +92,7 @@ ALTER TABLE "Events"
 ADD CONSTRAINT "FK_EventTypes_Events"
 FOREIGN KEY (evt_idevtt) REFERENCES EventTypes(evtt_id);
 
-CREATE TABLE Ban_List
+CREATE TABLE Bans
 (
 	"ban_description" TEXT NOT NULL,
 	"ban_start_date" DATETIME NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE Ban_List
 	"ban_modif_date" DATETIME NOT NULL
 );
 
-CREATE TABLE Ban_Type
+CREATE TABLE Ban_Types
 (
 	"bant_id" INT NOT NULL,
 	"bant_name" VARCHAR(50) NOT NULL,
@@ -109,3 +109,7 @@ CREATE TABLE Ban_Type
 	"bant_create_date" DATETIME NOT NULL,
 	"bant_modif_date" DATETIME NOT NULL
 );
+
+ALTER TABLE Ban_List
+ADD CONSTRAINT "FK_BanTypes_Bans"
+FOREIGN KEY (ban_idbant) REFERENCES BanTypes(bant_id);
