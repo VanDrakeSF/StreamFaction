@@ -1,0 +1,57 @@
+﻿@model StreamFaction.Models.Articles
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Articles</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.artc_title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.artc_title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.artc_content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.artc_content)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.artc_img)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.artc_img)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.artc_create_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.artc_create_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.artc_modif_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.artc_modif_date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.artc_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

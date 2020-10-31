@@ -13,14 +13,14 @@ namespace StreamFaction.Data
         public MvcFactionContext(DbContextOptions<MvcFactionContext> options) : base(options)
         {
         }
-        public DbSet<Users> Articles { get; set; }
-        public DbSet<Users> Bans { get; set; }
-        public DbSet<Users> BanTypes { get; set; }
-        public DbSet<Users> Channels { get; set; }
-        public DbSet<Users> Events { get; set; }
-        public DbSet<Users> EventTypes { get; set; }
-        public DbSet<Users> Status { get; set; }
-        public DbSet<Users> UserInfos { get; set; }
+        public DbSet<Articles> Articles { get; set; }
+        public DbSet<Bans> Bans { get; set; }
+        public DbSet<BanTypes> BanTypes { get; set; }
+        public DbSet<Channels> Channels { get; set; }
+        public DbSet<Events> Events { get; set; }
+        public DbSet<EventTypes> EventTypes { get; set; }
+        public DbSet<Status> Status { get; set; }
+        public DbSet<UserInfos> UserInfos { get; set; }
         public DbSet<Users> Users { get; set; }
     }
 }

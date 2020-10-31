@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class Bans
     {
+        public Int32 ban_id { get; set; }
         public String ban_description { get; set; }
         [DataType(DataType.Date)]
         public DateTime ban_start_date { get; set; }

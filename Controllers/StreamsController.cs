@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace StreamFaction.Controllers
 {
-    public class StreamsController1 : Controller
+    public class StreamsController : Controller
     {
         public IActionResult Index()
         {
+            ViewBag.width = 854;
+            ViewBag.height = 480;
+            ViewBag.channel = "Van_Drake";
             return View();
         }
     }

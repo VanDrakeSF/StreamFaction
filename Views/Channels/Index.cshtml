@@ -1,0 +1,85 @@
+﻿@model IEnumerable<StreamFaction.Models.Channels>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_facebook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_twitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_instagram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_discord)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_create_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cha_modif_date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_twitter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_instagram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_discord)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_create_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cha_modif_date)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.usrif_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.usrif_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.usrif_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

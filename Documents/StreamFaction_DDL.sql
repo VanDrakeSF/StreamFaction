@@ -1,3 +1,5 @@
+USE Stream_Faction
+
 CREATE TABLE Users
 (
 	"usr_id" INT PRIMARY KEY NOT NULL,
@@ -76,6 +78,8 @@ CREATE TABLE "Events"
 	"evt_id" INT PRIMARY KEY NOT NULL,
 	"evt_name" VARCHAR(50) NOT NULL,
 	"evt_description" TEXT NULL,
+	"evt_start_date" DATETIME NOT NULL,
+	"evt_end_date" DATETIME NOT NULL,
 	"evt_create_date" DATETIME NOT NULL,
 	"evt_modif_date" DATETIME NOT NULL
 );

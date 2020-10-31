@@ -18,10 +18,21 @@ namespace StreamFaction.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index() => View();
-        public IActionResult Privacy() => View();
-        public IActionResult Contact() => View();
-        public IActionResult Streams() => View();
+        public IActionResult Index()
+        {
+            ViewBag.width = 1080;
+            ViewBag.height = 720;
+            ViewBag.channel = "Stream_Faction";
+            return View();
+        }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

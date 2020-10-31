@@ -1,0 +1,51 @@
+﻿@model StreamFaction.Models.Users
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usr_login)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usr_login)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usr_psw)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usr_psw)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usr_create_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usr_create_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.usr_modif_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.usr_modif_date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.usr_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
