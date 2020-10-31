@@ -20,8 +20,8 @@ namespace StreamFaction.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.width = 1080;
-            ViewBag.height = 720;
+            ViewBag.width = 854;
+            ViewBag.height = 480;
             ViewBag.channel = "Stream_Faction";
             return View();
         }
