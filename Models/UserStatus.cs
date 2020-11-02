@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace StreamFaction.Models
 {
-    public class Status
+    public class UserStatus
     {
         [Key]
+        public Int32 usrsta_id { get; set; }
+        public Int32 usr_id { get; set; }
         public Int32 sta_id { get; set; }
-        public String name { get; set; }
-        public String sta_logo { get; set; }
-
+        public Boolean usrsta_enabled { get; set; }
         [DataType(DataType.Date)]
-        public DateTime sta_create_date { get; set; }
-        public DateTime sta_modif_date { get; set; }
+        public DateTime usrsta_create_date { get; set; }
+        public DateTime usrsta_modif_date { get; set; }
     }
 }

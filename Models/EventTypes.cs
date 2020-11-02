@@ -8,7 +8,7 @@ namespace StreamFaction.Models
 {
     public class EventTypes
     {
-        
+        [Key]
         public Int32 evtt_id { get; set; }
         public String evtt_name { get; set; }
         [DataType(DataType.Date)]

@@ -19,6 +19,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.cha_usr_id)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.cha_name)
             </th>
             <th>
@@ -49,6 +52,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.cha_usr_id)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.cha_name)
             </td>
             <td>
@@ -73,9 +79,9 @@
                 @Html.DisplayFor(modelItem => item.cha_modif_date)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.usrif_id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.usrif_id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.usrif_id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.cha_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.cha_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.cha_id">Delete</a>
             </td>
         </tr>
 }

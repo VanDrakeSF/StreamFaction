@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class BanTypes
     {
+        [Key]
         public Int32 bant_id { get; set; }
         public String bant_name { get; set; }
         public String bant_description { get; set; }

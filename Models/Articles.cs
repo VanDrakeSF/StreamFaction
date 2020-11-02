@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class Articles
     {
+		[Key]
 		public Int32 artc_id { get; set; }
 		public String artc_title { get; set; }
 		public String artc_content { get; set; }

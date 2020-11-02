@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class Events
     {
+        [Key]
         public Int32 evt_id { get; set; }
         public String evt_name { get; set; }
         public String evt_description { get; set; }

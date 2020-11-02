@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class Users
     {
+        [Key]
         public Int32 usr_id { get; set; }
         public String usr_login { get; set; }
         public String usr_psw { get; set; }

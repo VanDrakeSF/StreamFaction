@@ -8,7 +8,9 @@ namespace StreamFaction.Models
 {
     public class Channels
     {
-        public Int32 usrif_id { get; set; }
+        [Key]
+        public Int32 cha_id { get; set; }
+        public Int32 cha_usr_id { get; set; }
         public String cha_name { get; set; }
         public String cha_description { get; set; }
         public String cha_facebook { get; set; }

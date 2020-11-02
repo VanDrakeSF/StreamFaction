@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SQLitePCL;
+using StreamFaction.Data;
 using StreamFaction.Models;
 
 namespace StreamFaction.Controllers
@@ -12,18 +14,25 @@ namespace StreamFaction.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly MvcFactionContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(MvcFactionContext context, ILogger<HomeController> logger)
         {
+            _context = context;
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             ViewBag.width = 854;
             ViewBag.height = 480;
-            ViewBag.channel = "Stream_Faction";
-            return View();
+            var channel = _context.Channels
+                .FirstOrDefault(m => m.cha_name == "Stream_Faction");
+            if (channel == null)
+            {
+                return NotFound();
+            }
+            ViewBag.channel = channel.cha_name;
+            return View(ViewBag);
         }
         public IActionResult Privacy()
         {

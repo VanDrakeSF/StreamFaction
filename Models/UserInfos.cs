@@ -8,6 +8,7 @@ namespace StreamFaction.Models
 {
     public class UserInfos
     {
+        [Key]
         public Int32 usrif_id { get; set; }
         public String usrif_name { get; set; }
         public Boolean usrif_name_visible { get; set; }
